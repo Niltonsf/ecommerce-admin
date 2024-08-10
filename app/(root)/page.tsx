@@ -1,11 +1,12 @@
+import { UserButton } from '@clerk/nextjs'
 import React from 'react'
 
-const Home = () => {
+const SetupPage = () => {
   return (
     <div>
-      <span>Hello</span>
+      <UserButton afterSwitchSessionUrl="/" />
     </div>
   )
 }
 
-export default Home
+export default SetupPage
