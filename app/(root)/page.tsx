@@ -1,12 +1,19 @@
-import { UserButton } from '@clerk/nextjs'
-import React from 'react'
+'use client'
+
+import { useStoreModal } from '@/hooks/use-store-modal'
+import React, { useEffect } from 'react'
 
 const SetupPage = () => {
-  return (
-    <div>
-      <UserButton afterSwitchSessionUrl="/" />
-    </div>
-  )
+  const onOpen = useStoreModal((state) => state.onOpen)
+  const isOpen = useStoreModal((state) => state.isOpen)
+
+  useEffect(() => {
+    if (!isOpen) {
+      onOpen()
+    }
+  }, [isOpen, onOpen])
+
+  return <div>Root page</div>
 }
 
 export default SetupPage
