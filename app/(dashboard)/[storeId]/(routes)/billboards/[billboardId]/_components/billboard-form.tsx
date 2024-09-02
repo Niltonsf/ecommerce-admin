@@ -89,7 +89,7 @@ const BillboardForm = ({ initialData }: BillboardFormProps) => {
 
       router.refresh()
 
-      router.push('/')
+      router.push(`/${params.storeId}/billboards`)
 
       toast.success('Billboard deleted.')
     } catch (error) {
@@ -166,8 +166,6 @@ const BillboardForm = ({ initialData }: BillboardFormProps) => {
           </Button>
         </form>
       </Form>
-
-      <Separator />
 
       <AlertModal
         isOpen={open}
