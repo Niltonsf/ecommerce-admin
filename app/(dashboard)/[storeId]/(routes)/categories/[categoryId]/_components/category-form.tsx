@@ -116,7 +116,7 @@ const CategoryForm = ({ initialData, billboards }: CategoryFormProps) => {
         {initialData && (
           <Button
             variant="destructive"
-            size={'sm'}
+            size={'icon'}
             disabled={loading}
             onClick={() => setOpen(true)}
           >

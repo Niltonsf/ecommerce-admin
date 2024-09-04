@@ -104,7 +104,7 @@ const SizeForm = ({ initialData }: SizeFormProps) => {
         {initialData && (
           <Button
             variant="destructive"
-            size={'sm'}
+            size={'icon'}
             disabled={loading}
             onClick={() => setOpen(true)}
           >

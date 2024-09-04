@@ -1,6 +1,6 @@
 import prismadb from '@/lib/prismadb'
 import React from 'react'
-import SizeForm from './_components/billboard-form'
+import SizeForm from './_components/size-form'
 
 interface SizePageProps {
   params: { sizeId: string }
