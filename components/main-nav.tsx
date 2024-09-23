@@ -5,10 +5,7 @@ import Link from 'next/link'
 import { useParams, usePathname } from 'next/navigation'
 import React from 'react'
 
-const MainNav = ({
-  className,
-  ...props
-}: React.HTMLAttributes<HTMLElement>) => {
+const MainNav = ({ className }: React.HTMLAttributes<HTMLElement>) => {
   const pathname = usePathname()
   const params = useParams()
 
@@ -42,6 +39,11 @@ const MainNav = ({
       href: `/${params.storeId}/products`,
       label: 'Products',
       active: pathname === `/${params.storeId}/products`,
+    },
+    {
+      href: `/${params.storeId}/orders`,
+      label: 'Orders',
+      active: pathname === `/${params.storeId}/orders`,
     },
     {
       href: `/${params.storeId}/settings`,
